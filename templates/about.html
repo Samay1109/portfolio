@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>About Me</h2>
+<div class="about-section">
+    <h3>{{ details.name }}</h3>
+    <p><strong>Role:</strong> {{ details.role }}</p>
+    <p>{{ details.bio }}</p>
+    <h4>Skills:</h4>
+    <ul>
+        {% for skill in details.skills %}
+        <li>{{ skill }}</li>
+        {% endfor %}
+    </ul>
+    <h4>Hobbies:</h4>
+    <ul>
+        {% for hobby in details.hobbies %}
+        <li>{{ hobby }}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endblock %}
